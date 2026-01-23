@@ -3,6 +3,7 @@ import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster"
+import { BackgroundShapes } from '@/components/layout/background-shapes';
 
 export const metadata: Metadata = {
   title: 'ClipCut Membership',
@@ -25,7 +26,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
-        <div className="fixed top-0 left-0 w-full h-full -z-10 dark"></div>
+        <BackgroundShapes />
         <Header />
         <main>{children}</main>
         <Footer />
