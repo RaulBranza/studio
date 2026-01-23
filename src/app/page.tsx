@@ -20,7 +20,6 @@ import { cn } from '@/lib/utils';
 import { CombIcon, StraightRazorIcon } from '@/components/icons';
 import { useToast } from '@/hooks/use-toast';
 
-const heroImage = PlaceHolderImages.find(p => p.id === 'hero-image');
 const galleryImages = PlaceHolderImages.filter(p => p.id.startsWith('gallery-'));
 
 const services = [
@@ -175,16 +174,7 @@ function BookingForm() {
 export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <section id="home" className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center text-center text-white">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            data-ai-hint={heroImage.imageHint}
-            fill
-            className="object-cover -z-10 brightness-[.6]"
-          />
-        )}
+      <section id="home" className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center text-center text-white bg-transparent">
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto space-y-4">
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
@@ -197,7 +187,7 @@ export default function Home() {
               <Button asChild size="lg" variant="accent">
                 <a href="#book">Book Now</a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-black/20 border-white/50 hover:bg-white/10 text-white">
+              <Button asChild size="lg" variant="outline">
                  <a href="#services">Our Services</a>
               </Button>
             </div>
@@ -205,7 +195,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="w-full py-12 md:py-24 lg:py-32">
+      <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -217,7 +207,7 @@ export default function Home() {
           </div>
           <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
             {services.map((service) => (
-              <Card key={service.title} className="text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+              <Card key={service.title} className="text-center transition-transform transform hover:scale-105 hover:shadow-xl bg-card/80 backdrop-blur-sm">
                 <CardHeader>
                   <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
                     <service.icon className="w-8 h-8 text-primary" />
@@ -234,7 +224,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="gallery" className="w-full py-12 md:py-24 lg:py-32">
+      <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -250,7 +240,7 @@ export default function Home() {
                 {galleryImages.map((image) => (
                   <CarouselItem key={image.id} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-1">
-                      <Card className="overflow-hidden">
+                      <Card className="overflow-hidden bg-card/80 backdrop-blur-sm">
                         <CardContent className="p-0">
                            <Image
                             src={image.imageUrl}
@@ -273,7 +263,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="book" className="w-full py-12 md:py-24 lg:py-32">
+      <section id="book" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -284,7 +274,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mx-auto w-full max-w-3xl mt-12">
-            <Card>
+            <Card className="bg-card/80 backdrop-blur-sm">
               <CardContent className="p-6 md:p-8">
                 <BookingForm />
               </CardContent>
