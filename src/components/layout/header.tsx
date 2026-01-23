@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Menu, Scissors, Bot } from 'lucide-react';
+import { Menu, Scissors } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
@@ -31,13 +31,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-           <Link
-              href="/try-on"
-              className="text-foreground/60 transition-colors hover:text-foreground/80 flex items-center"
-            >
-              <Bot className="mr-1.5 h-4 w-4" />
-              Virtual Try-On
-            </Link>
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
           <Button asChild className="hidden md:flex" variant="accent">
@@ -67,15 +60,6 @@ export function Header() {
                       </Link>
                     </SheetClose>
                   ))}
-                  <SheetClose asChild>
-                    <Link
-                      href="/try-on"
-                      className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground flex items-center"
-                    >
-                      <Bot className="mr-2 h-5 w-5" />
-                      Virtual Try-On
-                    </Link>
-                   </SheetClose>
                 </nav>
                 <SheetClose asChild>
                   <Button asChild variant="accent">

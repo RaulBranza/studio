@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { format } from "date-fns";
-import { CalendarIcon, Scissors, Bot } from 'lucide-react';
+import { CalendarIcon, Scissors } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -19,8 +19,6 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { CombIcon, StraightRazorIcon } from '@/components/icons';
 import { useToast } from '@/hooks/use-toast';
-import Link from 'next/link';
-
 
 const heroImage = PlaceHolderImages.find(p => p.id === 'hero-image');
 const galleryImages = PlaceHolderImages.filter(p => p.id.startsWith('gallery-'));
@@ -236,31 +234,6 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="try-on" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="space-y-4">
-               <div className="inline-block rounded-lg bg-accent/20 px-3 py-1 text-sm font-medium text-accent-foreground">New!</div>
-              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Virtual Haircut Try-On
-              </h2>
-              <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                Curious about a new look? Upload your photo and use our new AI-powered tool to virtually try on different hairstyles before you commit.
-              </p>
-               <Button asChild size="lg" variant="accent">
-                <Link href="/try-on">
-                  <Bot className="mr-2 h-5 w-5" />
-                  Try The Styling Tool
-                </Link>
-              </Button>
-            </div>
-             <div className="flex items-center justify-center">
-              <Image src="https://picsum.photos/seed/tryon/600/400" width={600} height={400} alt="AI Tool Preview" data-ai-hint="man looking at phone" className="rounded-xl shadow-2xl"/>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-background">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
