@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { LogoCircle } from '@/components/logo';
 
 const SHAPES = [
   {
@@ -37,6 +38,12 @@ export function BackgroundShapes() {
                     style={shape.style}
                 />
             ))}
+            <div
+                className="absolute opacity-20 mix-blend-multiply filter blur-lg animate-blob w-72 h-72"
+                style={{ top: '30%', left: '40%', animationDelay: '5s', animationDuration: '20s' }}
+            >
+                <LogoCircle />
+            </div>
         </div>
     </div>
   );
