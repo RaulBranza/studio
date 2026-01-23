@@ -47,38 +47,47 @@ body {
     --sidebar-ring: 29 68% 55%;
   }
   .dark {
-    --background: 29 15% 10%;
-    --foreground: 28 29% 94%;
-    --card: 29 15% 12%;
-    --card-foreground: 28 29% 94%;
-    --popover: 29 15% 10%;
-    --popover-foreground: 28 29% 94%;
-    --primary: 29 28% 50%;
-    --primary-foreground: 30 20% 98%;
-    --secondary: 29 15% 20%;
-    --secondary-foreground: 28 29% 96%;
-    --muted: 29 15% 20%;
-    --muted-foreground: 28 29% 70%;
-    --accent: 29 68% 55%;
-    --accent-foreground: 20 100% 15%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 80%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 0 0% 90%;
+    --accent-foreground: 240 5.9% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 29 15% 25%;
-    --input: 29 15% 25%;
-    --ring: 29 68% 55%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 0 0% 83.9%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --sidebar-background: 29 15% 12%;
-    --sidebar-foreground: 28 29% 94%;
-    --sidebar-primary: 29 28% 50%;
-    --sidebar-primary-foreground: 30 20% 98%;
-    --sidebar-accent: 29 15% 20%;
-    --sidebar-accent-foreground: 28 29% 96%;
-    --sidebar-border: 29 15% 25%;
-    --sidebar-ring: 29 68% 55%;
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 0 0% 80%;
+    --sidebar-primary-foreground: 240 5.9% 10%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 0 0% 83.9%;
+  }
+}
+
+@keyframes move-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 80px 40px;
   }
 }
 
@@ -88,5 +97,15 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .dark body {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      hsl(var(--background)),
+      hsl(var(--background)) 20px,
+      hsla(var(--foreground), 0.015) 20px,
+      hsla(var(--foreground), 0.015) 40px
+    );
+    animation: move-stripes 3s linear infinite;
   }
 }
