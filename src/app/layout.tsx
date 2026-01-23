@@ -5,8 +5,8 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'ClipCut Barbershop',
-  description: 'Classic cuts with a modern twist. Book your appointment today.',
+  title: 'ClipCut Membership',
+  description: 'Your passport to premium grooming. Access a network of top-tier barbershops with a single membership.',
   icons: {
     icon: '/favicon.ico',
   },
@@ -25,6 +25,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
+        <div className="fixed top-0 left-0 w-full h-full -z-10 dark"></div>
         <Header />
         <main>{children}</main>
         <Footer />

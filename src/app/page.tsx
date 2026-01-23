@@ -27,19 +27,19 @@ const services = [
     icon: Scissors,
     title: 'Classic Haircut',
     description: 'A timeless cut, tailored to your style. Includes a wash and style.',
-    price: '$45',
+    price: 'Included',
   },
   {
     icon: StraightRazorIcon,
     title: 'Beard Trim & Shape',
     description: 'Expert shaping and trimming to keep your beard looking sharp.',
-    price: '$30',
+    price: 'Included',
   },
   {
     icon: CombIcon,
     title: 'Hair Styling',
     description: 'Get the perfect look for any occasion, from casual to formal.',
-    price: '$25',
+    price: 'Included',
   },
 ];
 
@@ -178,14 +178,14 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto space-y-4">
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-              ClipCut Barbershop
+              The Future of Grooming is Here.
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/90">
-              Classic Cuts, Modern Style. Your neighborhood barbershop for a sharp look and a great experience.
+              Introducing ClipCut Membership. One subscription, endless styles. Get access to our exclusive network of partner barbershops, anytime, anywhere.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="accent">
-                <a href="#book">Book Now</a>
+                <a href="#book">Become a Member</a>
               </Button>
               <Button asChild size="lg" variant="outline">
                  <a href="#services">Our Services</a>
@@ -199,9 +199,9 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Our Services</h2>
+              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Membership Perks</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                From a quick trim to a full grooming session, we've got you covered.
+                Your membership includes a wide range of services at any of our partner locations.
               </p>
             </div>
           </div>
@@ -228,9 +228,9 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Our Gallery</h2>
+              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Styles from Our Network</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                A showcase of our craft and the happy clients who trust us with their style.
+                See the incredible work from top barbers in the ClipCut network.
               </p>
             </div>
           </div>
@@ -267,9 +267,9 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Book an Appointment</h2>
+              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Find a Partner Barbershop</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Ready for a fresh look? Schedule your visit with one of our expert barbers.
+                Ready for a fresh look? Find a convenient partner location and book your next appointment seamlessly through our platform.
               </p>
             </div>
           </div>
