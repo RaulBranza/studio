@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "Interior of a modern and stylish barbershop.",
+      "imageUrl": "https://images.unsplash.com/photo-1610475680335-dafab5475150?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxiYXJiZXJzaG9wJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzY5MTg2NTU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "barbershop interior"
+    },
+    {
+      "id": "gallery-1",
+      "description": "A man with a fresh fade haircut.",
+      "imageUrl": "https://images.unsplash.com/photo-1590540178859-647e3b7a70bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBoYWlyY3V0fGVufDB8fHx8MTc2OTExMDY4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man haircut"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Close up of a perfectly shaped beard.",
+      "imageUrl": "https://images.unsplash.com/photo-1653071163799-2b4893467fd4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuJTIwYmVhcmR8ZW58MHx8fHwxNzY5MTQxOTM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man beard"
+    },
+    {
+      "id": "gallery-3",
+      "description": "A client smiling after a haircut.",
+      "imageUrl": "https://images.unsplash.com/photo-1604488912264-dfed70450d76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aGFwcHklMjBtYW58ZW58MHx8fHwxNzY5MTY5MTMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy man"
+    },
+    {
+      "id": "gallery-4",
+      "description": "A stylish pompadour haircut.",
+      "imageUrl": "https://images.unsplash.com/photo-1654097801176-cb1795fd0c5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBoYWlyc3R5bGV8ZW58MHx8fHwxNzY5MjEwNzM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man hairstyle"
+    },
+    {
+      "id": "gallery-5",
+      "description": "A barber at work, focused on a haircut.",
+      "imageUrl": "https://images.unsplash.com/photo-1631648080466-906e6a83dc7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYXJiZXIlMjB3b3JraW5nfGVufDB8fHx8MTc2OTIxMDczNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "barber working"
+    },
+    {
+      "id": "gallery-6",
+      "description": "A man with a classic side part hairstyle.",
+      "imageUrl": "https://images.unsplash.com/photo-1631695111633-69711b1350fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbGFzc2ljJTIwaGFpcmN1dHxlbnwwfHx8fDE3NjkxODc1NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "classic haircut"
+    }
+  ]
 }
