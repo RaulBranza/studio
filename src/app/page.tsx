@@ -243,10 +243,10 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto space-y-4">
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-              The Future of Grooming is Here.
+              ClipCut
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/90">
-              Introducing ClipCut Membership. One subscription, endless styles. Get access to our exclusive network of partner barbershops, anytime, anywhere.
+              one brand thousands of chairs CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="accent">
