@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { format } from "date-fns";
-import { CalendarIcon, Scissors } from 'lucide-react';
+import { CalendarIcon, Scissors, TrendingUp, BadgePercent, Zap, Clock, Users, ShieldCheck } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -172,6 +172,71 @@ function BookingForm() {
 
 
 export default function Home() {
+
+  const partnerBenefits = [
+    {
+      icon: TrendingUp,
+      title: "Crește vizibilitatea clienților potențiali",
+      description: <p>Prin promovarea centralizată, salonul tău apare în fața unei audiențe mai mari decât dacă te promovezi singur. Mai multe vizibilizări = mai multe oportunități de programări.</p>
+    },
+    {
+      icon: BadgePercent,
+      title: "Reducerea costurilor de marketing individual",
+      description: <p>În loc să cheltui fiecare leu pe reclame sau promovare dispersată, CLIPCUT consolidează vizibilitatea într-un canal mai puternic, eficientizând investiția.</p>
+    },
+    {
+      icon: Zap,
+      title: "Creșterea ratei de conversie",
+      description: <p>O prezență solidă în CLIPCUT transmite profesionalism și legitimitate. Oamenii rezervă mai ușor la cine pare serios, nu doar ocupat.</p>
+    },
+    {
+      icon: Clock,
+      title: "Economisești timp = maximizare a veniturilor",
+      description: (
+        <>
+          <p>Promovarea individuală îți consumă timp (postări, strategii, texte, reels). Parteneriatul CLIPCUT preia o parte din expunere, astfel:</p>
+          <ul className="list-disc list-inside text-left mt-2 space-y-1">
+            <li>tu te concentrezi pe clienți</li>
+            <li>economisești timp = mai multe programări rentabile</li>
+          </ul>
+          <p className="mt-2 font-medium">Timp economisit - bani câștigați.</p>
+        </>
+      )
+    },
+    {
+      icon: Users,
+      title: "Acces la colaborări și recomandări",
+      description: (
+         <>
+          <p>Fiind parte dintr-o comunitate selectivă, îți crești șansele:</p>
+          <ul className="list-disc list-inside text-left mt-2 space-y-1">
+            <li>să fii recomandat de alți membri</li>
+            <li>prețuri mai bune de la distribuitori</li>
+            <li>să fii invitat la evenimente sau campanii</li>
+          </ul>
+          <p className="mt-2">Toate acestea pot aduce client nou fără cost direct.</p>
+        </>
+      )
+    },
+    {
+      icon: ShieldCheck,
+      title: "Efect de „proof of quality”",
+      description: (
+        <>
+          <p>Accesul selectiv CLIPCUT funcționează ca o validare externă, reducând ezitarea clientului și susținând o decizie mai rapidă și mai sigură. Această validare nu promite rezultate, dar reduce fricțiunea deciziei: clientul caută mai puțin, compară mai puțin, se îndoiește mai puțin.</p>
+          <p className="font-semibold mt-4">În practică, asta poate însemna:</p>
+          <ul className="list-disc list-inside text-left mt-2 space-y-1">
+            <li>decizie mai rapidă de programare,</li>
+            <li>mai puține întrebări legate de preț,</li>
+            <li>mai multă deschidere către servicii complete,</li>
+            <li>o percepție generală de profesionalism ridicat.</li>
+          </ul>
+          <p className="mt-4 italic">„Proof of quality” nu este despre a spune că ești cel mai bun, ci despre a nu fi nevoit să demonstrezi constant.</p>
+        </>
+      )
+    }
+  ];
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <section id="home" className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center text-center text-white bg-transparent">
@@ -217,6 +282,37 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-2xl font-bold text-primary">{service.price}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="for-partners" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">ONE BRAND. THOUSANDS OF CHAIRS.</h2>
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
+              </p>
+              <h3 className="text-xl font-bold font-headline tracking-tighter sm:text-3xl pt-8 !mt-8">
+                ACCESUL ESTE SELECTIV
+              </h3>
+            </div>
+          </div>
+          <div className="mx-auto grid max-w-sm items-stretch gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
+            {partnerBenefits.map((benefit) => (
+              <Card key={benefit.title} className="text-center transition-transform transform hover:scale-105 hover:shadow-xl bg-card/80 backdrop-blur-sm h-full flex flex-col">
+                <CardHeader className="items-center">
+                  <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
+                    <benefit.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <CardTitle className="font-headline mt-4 text-xl">{benefit.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow text-sm text-left">
+                  <div className="text-muted-foreground">{benefit.description}</div>
                 </CardContent>
               </Card>
             ))}
