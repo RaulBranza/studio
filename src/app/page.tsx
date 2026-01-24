@@ -245,7 +245,7 @@ export default function Home() {
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
               ClipCut
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/90">
+            <p className="text-lg md:text-xl text-foreground/90">
               one brand thousands of chairs CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
