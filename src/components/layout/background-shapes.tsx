@@ -154,7 +154,7 @@ export function BackgroundShapes() {
                 <div
                     key={i}
                     className={cn(
-                        'absolute font-headline font-bold text-foreground/5 opacity-30 mix-blend-multiply filter blur-sm',
+                        'absolute font-headline font-bold text-foreground/10 opacity-50 mix-blend-multiply filter blur-sm',
                         text.className
                     )}
                     style={text.style}
