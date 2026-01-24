@@ -69,6 +69,81 @@ const TEXTS = [
     className: 'text-4xl bottom-[15%] right-[5%] animate-blob',
     style: { animationDelay: '11s', animationDuration: '21s' },
   },
+  {
+    text: 'ClipCut',
+    className: 'text-lg top-[15%] left-[85%] animate-blob',
+    style: { animationDelay: '0.5s', animationDuration: '20s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-2xl top-[70%] left-[10%] animate-blob',
+      style: { animationDelay: '1.5s', animationDuration: '24s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-4xl top-[40%] right-[40%] animate-blob',
+      style: { animationDelay: '2.5s', animationDuration: '18s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-6xl bottom-[20%] left-[50%] animate-blob',
+      style: { animationDelay: '3.5s', animationDuration: '28s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-xl top-[90%] right-[5%] animate-blob',
+      style: { animationDelay: '4.5s', animationDuration: '16s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-3xl bottom-[80%] left-[30%] animate-blob',
+      style: { animationDelay: '5.5s', animationDuration: '21s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-5xl top-[25%] right-[70%] animate-blob',
+      style: { animationDelay: '6.5s', animationDuration: '25s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-2xl bottom-[40%] left-[75%] animate-blob',
+      style: { animationDelay: '7.5s', animationDuration: '19s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-4xl top-[5%] left-[50%] animate-blob',
+      style: { animationDelay: '8.5s', animationDuration: '23s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-lg top-[95%] left-[25%] animate-blob',
+      style: { animationDelay: '9.5s', animationDuration: '27s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-3xl bottom-[10%] right-[30%] animate-blob',
+      style: { animationDelay: '10.5s', animationDuration: '15s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-6xl top-[50%] left-[15%] animate-blob',
+      style: { animationDelay: '11.5s', animationDuration: '29s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-xl bottom-[60%] right-[15%] animate-blob',
+      style: { animationDelay: '12.5s', animationDuration: '17s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-4xl top-[75%] left-[45%] animate-blob',
+      style: { animationDelay: '13.5s', animationDuration: '26s' },
+  },
+  {
+      text: 'ClipCut',
+      className: 'text-2xl bottom-[5%] right-[50%] animate-blob',
+      style: { animationDelay: '14.5s', animationDuration: '20s' },
+  }
 ];
 
 export function BackgroundShapes() {
