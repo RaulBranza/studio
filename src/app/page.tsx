@@ -266,11 +266,16 @@ export default function Home() {
               </h1>
             </ScrollAnimationWrapper>
             <ScrollAnimationWrapper delay={100} once={false}>
-              <p className="text-lg md:text-xl text-chrome">
-                one brand thousands of chairs CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
-              </p>
+              <h2 className="text-xl md:text-2xl font-medium tracking-wider uppercase text-chrome">
+                one brand thousands of chairs
+              </h2>
             </ScrollAnimationWrapper>
             <ScrollAnimationWrapper delay={200} once={false}>
+              <p className="text-lg md:text-xl text-chrome max-w-2xl mx-auto">
+                conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
+              </p>
+            </ScrollAnimationWrapper>
+            <ScrollAnimationWrapper delay={300} once={false}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" variant="accent">
                   <a href="#book">Devino Partener</a>
@@ -280,7 +285,7 @@ export default function Home() {
                 </Button>
               </div>
             </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper delay={300} once={false}>
+            <ScrollAnimationWrapper delay={400} once={false}>
               <div className="mt-8 flex flex-wrap justify-center gap-10 md:gap-16">
                 <a href={`tel:${contactDetails.phone}`} className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
                     <Phone className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
