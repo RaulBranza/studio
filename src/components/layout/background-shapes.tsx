@@ -6,44 +6,74 @@ import React from 'react';
 const TEXTS = [
   {
     text: 'ClipCut',
-    className: 'text-8xl top-1/4 left-1/4 animate-blob',
+    className: 'text-5xl top-1/4 left-1/4 animate-blob',
     style: { animationDelay: '0s' },
   },
   {
     text: 'ClipCut',
-    className: 'text-6xl top-1/2 right-1/4 animate-blob',
+    className: 'text-3xl top-1/2 right-1/4 animate-blob',
     style: { animationDelay: '2s' },
   },
   {
     text: 'ClipCut',
-    className: 'text-9xl bottom-1/4 right-1/3 animate-blob',
+    className: 'text-6xl bottom-1/4 right-1/3 animate-blob',
     style: { animationDelay: '4s' },
   },
   {
     text: 'ClipCut',
-    className: 'text-5xl bottom-1/2 left-1/3 animate-blob',
+    className: 'text-2xl bottom-1/2 left-1/3 animate-blob',
     style: { animationDelay: '6s' },
   },
    {
     text: 'ClipCut',
-    className: 'text-7xl top-1/3 right-1/2 animate-blob',
+    className: 'text-4xl top-1/3 right-1/2 animate-blob',
     style: { animationDelay: '8s' },
   },
   {
     text: 'ClipCut',
-    className: 'text-4xl bottom-1/3 left-1/2 animate-blob',
+    className: 'text-xl bottom-1/3 left-1/2 animate-blob',
     style: { animationDelay: '10s', animationDuration: '20s' },
   },
     {
     text: 'ClipCut',
-    className: 'text-8xl top-1/3 right-1/4 animate-blob',
+    className: 'text-5xl top-1/3 right-1/4 animate-blob',
     style: { animationDelay: '12s', animationDuration: '25s' },
+  },
+  {
+    text: 'ClipCut',
+    className: 'text-3xl top-[10%] left-[5%] animate-blob',
+    style: { animationDelay: '1s', animationDuration: '18s' },
+  },
+  {
+    text: 'ClipCut',
+    className: 'text-4xl top-[80%] left-[80%] animate-blob',
+    style: { animationDelay: '3s', animationDuration: '22s' },
+  },
+    {
+    text: 'ClipCut',
+    className: 'text-2xl top-[5%] right-[10%] animate-blob',
+    style: { animationDelay: '5s', animationDuration: '17s' },
+  },
+    {
+    text: 'ClipCut',
+    className: 'text-5xl bottom-[5%] left-[20%] animate-blob',
+    style: { animationDelay: '7s', animationDuration: '23s' },
+  },
+      {
+    text: 'ClipCut',
+    className: 'text-3xl top-[60%] left-[60%] animate-blob',
+    style: { animationDelay: '9s', animationDuration: '19s' },
+  },
+      {
+    text: 'ClipCut',
+    className: 'text-4xl bottom-[15%] right-[5%] animate-blob',
+    style: { animationDelay: '11s', animationDuration: '21s' },
   },
 ];
 
 export function BackgroundShapes() {
   return (
-    <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+    <div className="fixed top-0 left-0 w-full h-screen -z-10 overflow-hidden">
         <div className="relative w-full h-full">
             {TEXTS.map((text, i) => (
                 <div
