@@ -273,32 +273,24 @@ export default function Home() {
               </div>
             </ScrollAnimationWrapper>
             <ScrollAnimationWrapper delay={300} once={false}>
-                <div className="mt-8 flex flex-wrap justify-center gap-4">
-                    <Button asChild size="lg" variant="default" className="!px-6 !py-4 !h-auto">
-                        <a href={`tel:${contactDetails.phone}`} className="flex flex-col items-center gap-2">
-                            <Phone className="h-8 w-8" />
-                            <span>Call Us</span>
-                        </a>
-                    </Button>
-                    <Button asChild size="lg" variant="default" className="!px-6 !py-4 !h-auto">
-                        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
-                            <WhatsAppIcon className="h-8 w-8" />
-                            <span>WhatsApp</span>
-                        </a>
-                    </Button>
-                    <Button asChild size="lg" variant="default" className="!px-6 !py-4 !h-auto">
-                        <a href={contactDetails.instagram} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
-                            <Instagram className="h-8 w-8" />
-                            <span>Instagram</span>
-                        </a>
-                    </Button>
-                    <Button asChild size="lg" variant="default" className="!px-6 !py-4 !h-auto">
-                        <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
-                            <MapPin className="h-8 w-8" />
-                            <span>Find Us</span>
-                        </a>
-                    </Button>
-                </div>
+              <div className="mt-8 flex flex-wrap justify-center gap-10 md:gap-16">
+                <a href={`tel:${contactDetails.phone}`} className="group flex flex-col items-center gap-2 text-foreground/80 transition-all duration-300 hover:text-foreground hover:scale-110">
+                    <Phone className="h-10 w-10 text-primary drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0" />
+                    <span className="text-sm font-medium">Call Us</span>
+                </a>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 text-foreground/80 transition-all duration-300 hover:text-foreground hover:scale-110">
+                    <WhatsAppIcon className="h-10 w-10 text-primary drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0" />
+                    <span className="text-sm font-medium">WhatsApp</span>
+                </a>
+                <a href={contactDetails.instagram} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 text-foreground/80 transition-all duration-300 hover:text-foreground hover:scale-110">
+                    <Instagram className="h-10 w-10 text-primary drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0" />
+                    <span className="text-sm font-medium">Instagram</span>
+                </a>
+                <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 text-foreground/80 transition-all duration-300 hover:text-foreground hover:scale-110">
+                    <MapPin className="h-10 w-10 text-primary drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0" />
+                    <span className="text-sm font-medium">Find Us</span>
+                </a>
+              </div>
             </ScrollAnimationWrapper>
           </div>
         </div>
