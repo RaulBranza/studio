@@ -95,22 +95,19 @@ body {
 }
 
 @layer utilities {
-    .animate-blob {
-        animation: blob 15s infinite;
+    .animate-pulse-slow {
+        animation: pulse 15s infinite;
     }
 }
 
-@keyframes blob {
+@keyframes pulse {
 	0% {
-		transform: translate(0px, 0px) scale(1);
+		transform: scale(1);
 	}
-	33% {
-		transform: translate(10px, -15px) scale(1.1);
-	}
-	66% {
-		transform: translate(-10px, 10px) scale(0.95);
+	50% {
+		transform: scale(1.05);
 	}
 	100% {
-		transform: translate(0px, 0px) scale(1);
+		transform: scale(1);
 	}
 }
