@@ -23,31 +23,31 @@ const galleryImages = PlaceHolderImages.filter(p => p.id.startsWith('gallery-'))
 const services = [
   {
     icon: Scissors,
-    title: 'Classic Haircut',
-    description: 'A timeless cut, tailored to your style. Includes a wash and style.',
-    price: 'Included',
+    title: 'Tuns Clasic',
+    description: 'O tunsoare clasică, adaptată stilului tău. Include spălat și aranjat.',
+    price: 'Inclus',
   },
   {
     icon: StraightRazorIcon,
-    title: 'Beard Trim & Shape',
-    description: 'Expert shaping and trimming to keep your beard looking sharp.',
-    price: 'Included',
+    title: 'Tuns și Aranjat Barbă',
+    description: 'Conturare și aranjare profesională pentru a-ți menține barba impecabilă.',
+    price: 'Inclus',
   },
   {
     icon: CombIcon,
-    title: 'Hair Styling',
-    description: 'Get the perfect look for any occasion, from casual to formal.',
-    price: 'Included',
+    title: 'Styling Păr',
+    description: 'Obține look-ul perfect pentru orice ocazie, de la casual la formal.',
+    price: 'Inclus',
   },
 ];
 
 const joinFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email." }),
-  phone: z.string().min(10, { message: "Please enter a valid phone number." }),
-  shopLocation: z.string().min(5, { message: "Please enter your shop address." }),
-  town: z.string({ required_error: "Please select a town." }),
-  county: z.string({ required_error: "Please select a county." }),
+  name: z.string().min(2, { message: "Numele trebuie să aibă cel puțin 2 caractere." }),
+  email: z.string().email({ message: "Te rugăm să introduci un email valid." }),
+  phone: z.string().min(10, { message: "Te rugăm să introduci un număr de telefon valid." }),
+  shopLocation: z.string().min(5, { message: "Te rugăm să introduci adresa frizeriei." }),
+  town: z.string({ required_error: "Te rugăm să selectezi un oraș." }),
+  county: z.string({ required_error: "Te rugăm să selectezi un județ." }),
 });
 
 type JoinFormValues = z.infer<typeof joinFormSchema>;
@@ -66,8 +66,8 @@ function JoinForm() {
 
   function onSubmit(data: JoinFormValues) {
     toast({
-      title: "Application Sent!",
-      description: `Thanks, ${data.name}! We've received your application to join ClipCut. We'll be in touch shortly.`,
+      title: "Aplicație Trimisă!",
+      description: `Mulțumim, ${data.name}! Am primit aplicația ta pentru a te alătura ClipCut. Te vom contacta în curând.`,
     });
     form.reset();
   }
@@ -81,9 +81,9 @@ function JoinForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Full Name</FormLabel>
+                <FormLabel>Nume Complet</FormLabel>
                 <FormControl>
-                  <Input placeholder="John Doe" {...field} />
+                  <Input placeholder="Popescu Ion" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -96,7 +96,7 @@ function JoinForm() {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="john.doe@example.com" {...field} />
+                  <Input placeholder="ion.popescu@exemplu.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -109,9 +109,9 @@ function JoinForm() {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Phone Number</FormLabel>
+                <FormLabel>Număr de Telefon</FormLabel>
                 <FormControl>
-                  <Input placeholder="0712 345 678" {...field} />
+                  <Input placeholder="07xxxxxxxx" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -122,7 +122,7 @@ function JoinForm() {
             name="shopLocation"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Barber Shop Location</FormLabel>
+                <FormLabel>Locația Frizeriei</FormLabel>
                 <FormControl>
                   <Input placeholder="Str. Exemplu nr. 10" {...field} />
                 </FormControl>
@@ -137,11 +137,11 @@ function JoinForm() {
             name="town"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Town</FormLabel>
+                <FormLabel>Oraș</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select your town" />
+                      <SelectValue placeholder="Selectează orașul" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -157,11 +157,11 @@ function JoinForm() {
             name="county"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>County</FormLabel>
+                <FormLabel>Județ</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select your county" />
+                      <SelectValue placeholder="Selectează județul" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -173,7 +173,7 @@ function JoinForm() {
             )}
           />
         </div>
-        <Button type="submit" className="w-full md:w-auto" variant="accent">Send Application</Button>
+        <Button type="submit" className="w-full md:w-auto" variant="accent">Trimite Aplicația</Button>
       </form>
     </Form>
   )
@@ -273,10 +273,10 @@ export default function Home() {
             <ScrollAnimationWrapper delay={200} once={false}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" variant="accent">
-                  <a href="#book">Become a Partner</a>
+                  <a href="#book">Devino Partener</a>
                 </Button>
                 <Button asChild size="lg" variant="outline">
-                   <a href="#services">Our Services</a>
+                   <a href="#services">Serviciile Noastre</a>
                 </Button>
               </div>
             </ScrollAnimationWrapper>
@@ -284,7 +284,7 @@ export default function Home() {
               <div className="mt-8 flex flex-wrap justify-center gap-10 md:gap-16">
                 <a href={`tel:${contactDetails.phone}`} className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
                     <Phone className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
-                    <span className="text-sm font-medium text-chrome">Call Us</span>
+                    <span className="text-sm font-medium text-chrome">Sună-ne</span>
                 </a>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
                     <WhatsAppIcon className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
@@ -296,7 +296,7 @@ export default function Home() {
                 </a>
                 <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
                     <MapPin className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
-                    <span className="text-sm font-medium text-chrome">Find Us</span>
+                    <span className="text-sm font-medium text-chrome">Găsește-ne</span>
                 </a>
               </div>
             </ScrollAnimationWrapper>
@@ -309,9 +309,9 @@ export default function Home() {
           <ScrollAnimationWrapper once={false}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Membership Perks</h2>
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Avantajele Membrilor</h2>
                 <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
-                  Your membership includes a wide range of services at any of our partner locations.
+                  Abonamentul tău include o gamă largă de servicii în oricare dintre locațiile partenere.
                 </p>
               </div>
             </div>
@@ -377,9 +377,9 @@ export default function Home() {
           <ScrollAnimationWrapper once={false}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Styles from Our Network</h2>
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Stiluri din Rețeaua Noastră</h2>
                 <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
-                  See the incredible work from top barbers in the ClipCut network.
+                  Vezi lucrările incredibile de la cei mai buni frizeri din rețeaua ClipCut.
                 </p>
               </div>
             </div>
@@ -420,9 +420,9 @@ export default function Home() {
           <ScrollAnimationWrapper once={false}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Join ClipCut</h2>
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Alătură-te ClipCut</h2>
                 <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
-                  Become our partner.
+                  Devino partenerul nostru.
                 </p>
               </div>
             </div>

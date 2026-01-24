@@ -7,7 +7,7 @@ import { BackgroundShapes } from '@/components/layout/background-shapes';
 
 export const metadata: Metadata = {
   title: 'ClipCut Membership',
-  description: 'Your passport to premium grooming. Access a network of top-tier barbershops with a single membership.',
+  description: 'Pașaportul tău pentru îngrijire premium. Accesează o rețea de frizerii de top cu un singur abonament.',
   icons: {
     icon: '/favicon.ico',
   },

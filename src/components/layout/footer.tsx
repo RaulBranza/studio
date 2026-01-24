@@ -11,8 +11,8 @@ export function Footer() {
               <Scissors className="h-6 w-6 text-primary" />
               <span className="font-bold font-headline text-lg">ClipCut Membership</span>
             </Link>
-            <p className="text-sm">Your passport to premium grooming.</p>
-            <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} ClipCut. All rights reserved.</p>
+            <p className="text-sm">Pașaportul tău pentru îngrijire premium.</p>
+            <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} ClipCut. Toate drepturile rezervate.</p>
           </div>
         </div>
       </div>
