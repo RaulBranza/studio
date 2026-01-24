@@ -311,7 +311,7 @@ export default function Home() {
           <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
             {services.map((service, index) => (
               <ScrollAnimationWrapper key={service.title} delay={index * 100} once={false}>
-                <Card className="text-center transition-transform transform hover:scale-105 hover:shadow-xl bg-card/80 backdrop-blur-sm">
+                <Card className="text-center bg-card/80 backdrop-blur-sm">
                   <CardHeader>
                     <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
                       <service.icon className="w-8 h-8 text-primary" />
@@ -347,7 +347,7 @@ export default function Home() {
           <div className="mx-auto grid max-w-sm items-stretch gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
             {partnerBenefits.map((benefit, index) => (
               <ScrollAnimationWrapper key={benefit.title} delay={index * 100} once={false}>
-                <Card className="text-center transition-transform transform hover:scale-105 hover:shadow-xl bg-card/80 backdrop-blur-sm h-full flex flex-col">
+                <Card className="text-center bg-card/80 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="items-center">
                     <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
                       <benefit.icon className="w-8 h-8 text-primary" />
