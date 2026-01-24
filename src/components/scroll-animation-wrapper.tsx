@@ -50,7 +50,7 @@ export function ScrollAnimationWrapper({ children, className, delay = 0, once = 
       ref={ref}
       className={cn(
         'transition-all ease-out duration-1000',
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10',
+        isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10',
         className
       )}
       style={{ transitionDelay: `${delay}ms` }}
