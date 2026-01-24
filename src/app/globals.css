@@ -99,14 +99,14 @@ body {
       background-image: linear-gradient(
         90deg,
         hsl(var(--foreground)),
-        hsl(var(--accent)),
+        hsl(var(--muted-foreground)),
         hsl(var(--foreground))
       );
       background-size: 200% auto;
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      animation: chrome-move 3s linear infinite;
+      animation: chrome-move 2s linear infinite;
     }
 
     .animate-drift {
