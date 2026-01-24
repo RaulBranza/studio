@@ -275,19 +275,19 @@ export default function Home() {
             <ScrollAnimationWrapper delay={300} once={false}>
               <div className="mt-8 flex flex-wrap justify-center gap-10 md:gap-16">
                 <a href={`tel:${contactDetails.phone}`} className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
-                    <Phone className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-chrome" />
+                    <Phone className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
                     <span className="text-sm font-medium text-chrome">Call Us</span>
                 </a>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
-                    <WhatsAppIcon className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-chrome" />
+                    <WhatsAppIcon className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
                     <span className="text-sm font-medium text-chrome">WhatsApp</span>
                 </a>
                 <a href={contactDetails.instagram} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
-                    <Instagram className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-chrome" />
+                    <Instagram className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
                     <span className="text-sm font-medium text-chrome">Instagram</span>
                 </a>
                 <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
-                    <MapPin className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-chrome" />
+                    <MapPin className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
                     <span className="text-sm font-medium text-chrome">Find Us</span>
                 </a>
               </div>
@@ -314,7 +314,7 @@ export default function Home() {
                 <Card className="text-center bg-card/80 backdrop-blur-sm">
                   <CardHeader>
                     <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
-                      <service.icon className="w-8 h-8 text-chrome" />
+                      <service.icon className="w-8 h-8 text-primary" />
                     </div>
                     <CardTitle className="font-headline mt-4 text-chrome">{service.title}</CardTitle>
                     <CardDescription className="pt-2 text-chrome">{service.description}</CardDescription>
@@ -350,12 +350,12 @@ export default function Home() {
                 <Card className="text-center bg-card/80 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="items-center">
                     <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
-                      <benefit.icon className="w-8 h-8 text-chrome" />
+                      <benefit.icon className="w-8 h-8 text-primary" />
                     </div>
                     <CardTitle className="font-headline mt-4 text-xl text-chrome">{benefit.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow text-sm text-left">
-                    <div className="text-chrome">{benefit.description}</div>
+                    <div>{benefit.description}</div>
                   </CardContent>
                 </Card>
               </ScrollAnimationWrapper>
