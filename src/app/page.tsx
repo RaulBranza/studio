@@ -248,7 +248,7 @@ export default function Home() {
   const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactDetails.address)}`;
 
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <div className="flex flex-col min-h-[100dvh] text-3d">
       <section id="home" className="relative w-full h-auto min-h-[600px] flex items-center justify-center text-center text-white bg-transparent py-20">
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto space-y-4">
