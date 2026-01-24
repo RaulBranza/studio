@@ -19,6 +19,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { CombIcon, StraightRazorIcon } from '@/components/icons';
 import { useToast } from '@/hooks/use-toast';
+import { ScrollAnimationWrapper } from '@/components/scroll-animation-wrapper';
 
 const galleryImages = PlaceHolderImages.filter(p => p.id.startsWith('gallery-'));
 
@@ -242,48 +243,58 @@ export default function Home() {
       <section id="home" className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center text-center text-white bg-transparent">
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto space-y-4">
-            <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-              ClipCut
-            </h1>
-            <p className="text-lg md:text-xl text-foreground/90">
-              one brand thousands of chairs CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="accent">
-                <a href="#book">Become a Member</a>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                 <a href="#services">Our Services</a>
-              </Button>
-            </div>
+            <ScrollAnimationWrapper>
+              <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+                ClipCut
+              </h1>
+            </ScrollAnimationWrapper>
+            <ScrollAnimationWrapper delay={100}>
+              <p className="text-lg md:text-xl text-foreground/90">
+                one brand thousands of chairs CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
+              </p>
+            </ScrollAnimationWrapper>
+            <ScrollAnimationWrapper delay={200}>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" variant="accent">
+                  <a href="#book">Become a Member</a>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                   <a href="#services">Our Services</a>
+                </Button>
+              </div>
+            </ScrollAnimationWrapper>
           </div>
         </div>
       </section>
 
       <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Membership Perks</h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Your membership includes a wide range of services at any of our partner locations.
-              </p>
+          <ScrollAnimationWrapper>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Membership Perks</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Your membership includes a wide range of services at any of our partner locations.
+                </p>
+              </div>
             </div>
-          </div>
+          </ScrollAnimationWrapper>
           <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
-            {services.map((service) => (
-              <Card key={service.title} className="text-center transition-transform transform hover:scale-105 hover:shadow-xl bg-card/80 backdrop-blur-sm">
-                <CardHeader>
-                  <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
-                    <service.icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <CardTitle className="font-headline mt-4">{service.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground pt-2">{service.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-2xl font-bold text-primary">{service.price}</p>
-                </CardContent>
-              </Card>
+            {services.map((service, index) => (
+              <ScrollAnimationWrapper key={service.title} delay={index * 100}>
+                <Card className="text-center transition-transform transform hover:scale-105 hover:shadow-xl bg-card/80 backdrop-blur-sm">
+                  <CardHeader>
+                    <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
+                      <service.icon className="w-8 h-8 text-primary" />
+                    </div>
+                    <CardTitle className="font-headline mt-4">{service.title}</CardTitle>
+                    <CardDescription className="text-muted-foreground pt-2">{service.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-2xl font-bold text-primary">{service.price}</p>
+                  </CardContent>
+                </Card>
+              </ScrollAnimationWrapper>
             ))}
           </div>
         </div>
@@ -291,30 +302,34 @@ export default function Home() {
 
       <section id="for-partners" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">ONE BRAND. THOUSANDS OF CHAIRS.</h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
-              </p>
-              <h3 className="text-xl font-bold font-headline tracking-tighter sm:text-3xl pt-8 !mt-8">
-                ACCESUL ESTE SELECTIV
-              </h3>
+          <ScrollAnimationWrapper>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">ONE BRAND. THOUSANDS OF CHAIRS.</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
+                </p>
+                <h3 className="text-xl font-bold font-headline tracking-tighter sm:text-3xl pt-8 !mt-8">
+                  ACCESUL ESTE SELECTIV
+                </h3>
+              </div>
             </div>
-          </div>
+          </ScrollAnimationWrapper>
           <div className="mx-auto grid max-w-sm items-stretch gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
-            {partnerBenefits.map((benefit) => (
-              <Card key={benefit.title} className="text-center transition-transform transform hover:scale-105 hover:shadow-xl bg-card/80 backdrop-blur-sm h-full flex flex-col">
-                <CardHeader className="items-center">
-                  <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
-                    <benefit.icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <CardTitle className="font-headline mt-4 text-xl">{benefit.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow text-sm text-left">
-                  <div className="text-muted-foreground">{benefit.description}</div>
-                </CardContent>
-              </Card>
+            {partnerBenefits.map((benefit, index) => (
+              <ScrollAnimationWrapper key={benefit.title} delay={index * 100}>
+                <Card className="text-center transition-transform transform hover:scale-105 hover:shadow-xl bg-card/80 backdrop-blur-sm h-full flex flex-col">
+                  <CardHeader className="items-center">
+                    <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
+                      <benefit.icon className="w-8 h-8 text-primary" />
+                    </div>
+                    <CardTitle className="font-headline mt-4 text-xl">{benefit.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow text-sm text-left">
+                    <div className="text-muted-foreground">{benefit.description}</div>
+                  </CardContent>
+                </Card>
+              </ScrollAnimationWrapper>
             ))}
           </div>
         </div>
@@ -322,60 +337,68 @@ export default function Home() {
       
       <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Styles from Our Network</h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                See the incredible work from top barbers in the ClipCut network.
-              </p>
+          <ScrollAnimationWrapper>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Styles from Our Network</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  See the incredible work from top barbers in the ClipCut network.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="mt-12">
-            <Carousel opts={{ loop: true }} className="w-full max-w-4xl mx-auto">
-              <CarouselContent>
-                {galleryImages.map((image) => (
-                  <CarouselItem key={image.id} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1">
-                      <Card className="overflow-hidden bg-card/80 backdrop-blur-sm">
-                        <CardContent className="p-0">
-                           <Image
-                            src={image.imageUrl}
-                            alt={image.description}
-                            data-ai-hint={image.imageHint}
-                            width={400}
-                            height={500}
-                            className="aspect-[4/5] w-full object-cover"
-                          />
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="ml-12 sm:ml-0" />
-              <CarouselNext className="mr-12 sm:mr-0"/>
-            </Carousel>
-          </div>
+          </ScrollAnimationWrapper>
+          <ScrollAnimationWrapper delay={200}>
+            <div className="mt-12">
+              <Carousel opts={{ loop: true }} className="w-full max-w-4xl mx-auto">
+                <CarouselContent>
+                  {galleryImages.map((image) => (
+                    <CarouselItem key={image.id} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="p-1">
+                        <Card className="overflow-hidden bg-card/80 backdrop-blur-sm">
+                          <CardContent className="p-0">
+                             <Image
+                              src={image.imageUrl}
+                              alt={image.description}
+                              data-ai-hint={image.imageHint}
+                              width={400}
+                              height={500}
+                              className="aspect-[4/5] w-full object-cover"
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="ml-12 sm:ml-0" />
+                <CarouselNext className="mr-12 sm:mr-0"/>
+              </Carousel>
+            </div>
+          </ScrollAnimationWrapper>
         </div>
       </section>
 
       <section id="book" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Find a Partner Barbershop</h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Ready for a fresh look? Find a convenient partner location and book your next appointment seamlessly through our platform.
-              </p>
+          <ScrollAnimationWrapper>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Find a Partner Barbershop</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Ready for a fresh look? Find a convenient partner location and book your next appointment seamlessly through our platform.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="mx-auto w-full max-w-3xl mt-12">
-            <Card className="bg-card/80 backdrop-blur-sm">
-              <CardContent className="p-6 md:p-8">
-                <BookingForm />
-              </CardContent>
-            </Card>
-          </div>
+          </ScrollAnimationWrapper>
+          <ScrollAnimationWrapper delay={200}>
+            <div className="mx-auto w-full max-w-3xl mt-12">
+              <Card className="bg-card/80 backdrop-blur-sm">
+                <CardContent className="p-6 md:p-8">
+                  <BookingForm />
+                </CardContent>
+              </Card>
+            </div>
+          </ScrollAnimationWrapper>
         </div>
       </section>
     </div>
