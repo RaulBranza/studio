@@ -109,7 +109,7 @@ body {
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      animation: chrome-move 8s ease-in-out infinite alternate;
+      animation: chrome-move 8s linear infinite;
     }
 
     .animate-drift {
@@ -119,10 +119,10 @@ body {
 
 @keyframes chrome-move {
   from {
-    background-position: 0% 50%;
+    background-position: 100% 50%;
   }
   to {
-    background-position: 100% 50%;
+    background-position: 0% 50%;
   }
 }
 
