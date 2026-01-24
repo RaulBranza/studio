@@ -11,7 +11,7 @@ const navLinks = [
   { href: '/#services', label: 'Services' },
   { href: '/#for-partners', label: 'For Partners' },
   { href: '/#gallery', label: 'Gallery' },
-  { href: '/#book', label: 'Book' },
+  { href: '/#book', label: 'Join' },
 ];
 
 export function Header() {
@@ -35,7 +35,7 @@ export function Header() {
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
           <Button asChild className="hidden md:flex" variant="accent">
-            <a href="/#book">Become a Member</a>
+            <a href="/#book">Become a Partner</a>
           </Button>
           <Sheet>
             <SheetTrigger asChild>
@@ -64,7 +64,7 @@ export function Header() {
                 </nav>
                 <SheetClose asChild>
                   <Button asChild variant="accent">
-                    <a href="/#book">Become a Member</a>
+                    <a href="/#book">Become a Partner</a>
                   </Button>
                 </SheetClose>
               </div>

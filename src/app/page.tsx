@@ -4,22 +4,19 @@ import Image from 'next/image';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { format } from "date-fns";
-import { CalendarIcon, Scissors, TrendingUp, BadgePercent, Zap, Clock, Users, ShieldCheck, Phone, Instagram, MapPin } from 'lucide-react';
+import { Scissors, TrendingUp, BadgePercent, Zap, Clock, Users, ShieldCheck, Phone, Instagram, MapPin } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Calendar } from "@/components/ui/calendar";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { cn } from '@/lib/utils';
 import { CombIcon, StraightRazorIcon, WhatsAppIcon } from '@/components/icons';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollAnimationWrapper } from '@/components/scroll-animation-wrapper';
+import { judete, localitati } from '@/lib/romanian-data';
 
 const galleryImages = PlaceHolderImages.filter(p => p.id.startsWith('gallery-'));
 
@@ -44,29 +41,33 @@ const services = [
   },
 ];
 
-const bookingFormSchema = z.object({
+const joinFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email." }),
-  service: z.string({ required_error: "Please select a service." }),
-  date: z.date({ required_error: "A date for your appointment is required." }),
+  phone: z.string().min(10, { message: "Please enter a valid phone number." }),
+  shopLocation: z.string().min(5, { message: "Please enter your shop address." }),
+  town: z.string({ required_error: "Please select a town." }),
+  county: z.string({ required_error: "Please select a county." }),
 });
 
-type BookingFormValues = z.infer<typeof bookingFormSchema>;
+type JoinFormValues = z.infer<typeof joinFormSchema>;
 
-function BookingForm() {
+function JoinForm() {
   const { toast } = useToast();
-  const form = useForm<BookingFormValues>({
-    resolver: zodResolver(bookingFormSchema),
+  const form = useForm<JoinFormValues>({
+    resolver: zodResolver(joinFormSchema),
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
+      shopLocation: "",
     },
   });
 
-  function onSubmit(data: BookingFormValues) {
+  function onSubmit(data: JoinFormValues) {
     toast({
-      title: "Appointment Requested!",
-      description: `Thanks, ${data.name}! We've received your request for a ${data.service.toLowerCase()} on ${format(data.date, 'PPP')}. We'll email you shortly to confirm.`,
+      title: "Application Sent!",
+      description: `Thanks, ${data.name}! We've received your application to join ClipCut. We'll be in touch shortly.`,
     });
     form.reset();
   }
@@ -103,20 +104,48 @@ function BookingForm() {
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <FormField
+           <FormField
             control={form.control}
-            name="service"
+            name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Service</FormLabel>
+                <FormLabel>Phone Number</FormLabel>
+                <FormControl>
+                  <Input placeholder="0712 345 678" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="shopLocation"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Barber Shop Location</FormLabel>
+                <FormControl>
+                  <Input placeholder="Str. Exemplu nr. 10" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <FormField
+            control={form.control}
+            name="town"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Town</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select a service" />
+                      <SelectValue placeholder="Select your town" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    {services.map(s => <SelectItem key={s.title} value={s.title}>{s.title}</SelectItem>)}
+                    {localitati.map(town => <SelectItem key={town} value={town}>{town}</SelectItem>)}
                   </SelectContent>
                 </Select>
                 <FormMessage />
@@ -125,47 +154,26 @@ function BookingForm() {
           />
            <FormField
             control={form.control}
-            name="date"
+            name="county"
             render={({ field }) => (
-              <FormItem className="flex flex-col">
-                <FormLabel>Preferred Date</FormLabel>
-                <Popover>
-                  <PopoverTrigger asChild>
-                    <FormControl>
-                      <Button
-                        variant={"outline"}
-                        className={cn(
-                          "w-full pl-3 text-left font-normal",
-                          !field.value && "text-muted-foreground"
-                        )}
-                      >
-                        {field.value ? (
-                          format(field.value, "PPP")
-                        ) : (
-                          <span>Pick a date</span>
-                        )}
-                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                      </Button>
-                    </FormControl>
-                  </PopoverTrigger>
-                  <PopoverContent className="w-auto p-0" align="start">
-                    <Calendar
-                      mode="single"
-                      selected={field.value}
-                      onSelect={field.onChange}
-                      disabled={(date) =>
-                        date < new Date() || date < new Date("1900-01-01")
-                      }
-                      initialFocus
-                    />
-                  </PopoverContent>
-                </Popover>
+              <FormItem>
+                <FormLabel>County</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select your county" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {judete.map(county => <SelectItem key={county} value={county}>{county}</SelectItem>)}
+                  </SelectContent>
+                </Select>
                 <FormMessage />
               </FormItem>
             )}
           />
         </div>
-        <Button type="submit" className="w-full md:w-auto" variant="accent">Request Appointment</Button>
+        <Button type="submit" className="w-full md:w-auto" variant="accent">Send Application</Button>
       </form>
     </Form>
   )
@@ -265,7 +273,7 @@ export default function Home() {
             <ScrollAnimationWrapper delay={200} once={false}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" variant="accent">
-                  <a href="#book">Become a Member</a>
+                  <a href="#book">Become a Partner</a>
                 </Button>
                 <Button asChild size="lg" variant="outline">
                    <a href="#services">Our Services</a>
@@ -412,9 +420,9 @@ export default function Home() {
           <ScrollAnimationWrapper once={false}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Find a Partner Barbershop</h2>
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Join ClipCut</h2>
                 <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
-                  Ready for a fresh look? Find a convenient partner location and book your next appointment seamlessly through our platform.
+                  Become our partner.
                 </p>
               </div>
             </div>
@@ -423,7 +431,7 @@ export default function Home() {
             <div className="mx-auto w-full max-w-3xl mt-12">
               <Card className="bg-card/80 backdrop-blur-sm">
                 <CardContent className="p-6 md:p-8">
-                  <BookingForm />
+                  <JoinForm />
                 </CardContent>
               </Card>
             </div>
