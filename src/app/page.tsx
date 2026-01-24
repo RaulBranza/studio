@@ -243,17 +243,17 @@ export default function Home() {
       <section id="home" className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center text-center text-white bg-transparent">
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto space-y-4">
-            <ScrollAnimationWrapper>
+            <ScrollAnimationWrapper once={false}>
               <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
                 ClipCut
               </h1>
             </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper delay={100}>
+            <ScrollAnimationWrapper delay={100} once={false}>
               <p className="text-lg md:text-xl text-foreground/90">
                 one brand thousands of chairs CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
               </p>
             </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper delay={200}>
+            <ScrollAnimationWrapper delay={200} once={false}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" variant="accent">
                   <a href="#book">Become a Member</a>
@@ -269,7 +269,7 @@ export default function Home() {
 
       <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
-          <ScrollAnimationWrapper>
+          <ScrollAnimationWrapper once={false}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Membership Perks</h2>
@@ -281,7 +281,7 @@ export default function Home() {
           </ScrollAnimationWrapper>
           <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
             {services.map((service, index) => (
-              <ScrollAnimationWrapper key={service.title} delay={index * 100}>
+              <ScrollAnimationWrapper key={service.title} delay={index * 100} once={false}>
                 <Card className="text-center transition-transform transform hover:scale-105 hover:shadow-xl bg-card/80 backdrop-blur-sm">
                   <CardHeader>
                     <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
@@ -302,7 +302,7 @@ export default function Home() {
 
       <section id="for-partners" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
-          <ScrollAnimationWrapper>
+          <ScrollAnimationWrapper once={false}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">ONE BRAND. THOUSANDS OF CHAIRS.</h2>
@@ -317,7 +317,7 @@ export default function Home() {
           </ScrollAnimationWrapper>
           <div className="mx-auto grid max-w-sm items-stretch gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
             {partnerBenefits.map((benefit, index) => (
-              <ScrollAnimationWrapper key={benefit.title} delay={index * 100}>
+              <ScrollAnimationWrapper key={benefit.title} delay={index * 100} once={false}>
                 <Card className="text-center transition-transform transform hover:scale-105 hover:shadow-xl bg-card/80 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="items-center">
                     <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
@@ -337,7 +337,7 @@ export default function Home() {
       
       <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
-          <ScrollAnimationWrapper>
+          <ScrollAnimationWrapper once={false}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Styles from Our Network</h2>
@@ -347,7 +347,7 @@ export default function Home() {
               </div>
             </div>
           </ScrollAnimationWrapper>
-          <ScrollAnimationWrapper delay={200}>
+          <ScrollAnimationWrapper delay={200} once={false}>
             <div className="mt-12">
               <Carousel opts={{ loop: true }} className="w-full max-w-4xl mx-auto">
                 <CarouselContent>
@@ -380,7 +380,7 @@ export default function Home() {
 
       <section id="book" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
-          <ScrollAnimationWrapper>
+          <ScrollAnimationWrapper once={false}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Find a Partner Barbershop</h2>
@@ -390,7 +390,7 @@ export default function Home() {
               </div>
             </div>
           </ScrollAnimationWrapper>
-          <ScrollAnimationWrapper delay={200}>
+          <ScrollAnimationWrapper delay={200} once={false}>
             <div className="mx-auto w-full max-w-3xl mt-12">
               <Card className="bg-card/80 backdrop-blur-sm">
                 <CardContent className="p-6 md:p-8">
