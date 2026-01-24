@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { format } from "date-fns";
-import { CalendarIcon, Scissors, TrendingUp, BadgePercent, Zap, Clock, Users, ShieldCheck } from 'lucide-react';
+import { CalendarIcon, Scissors, TrendingUp, BadgePercent, Zap, Clock, Users, ShieldCheck, Phone, Instagram, MapPin } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -17,7 +17,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Calendar } from "@/components/ui/calendar";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
-import { CombIcon, StraightRazorIcon } from '@/components/icons';
+import { CombIcon, StraightRazorIcon, WhatsAppIcon } from '@/components/icons';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollAnimationWrapper } from '@/components/scroll-animation-wrapper';
 
@@ -238,9 +238,18 @@ export default function Home() {
     }
   ];
 
+  const contactDetails = {
+    phone: '0733357222',
+    instagram: 'https://www.instagram.com/_clipcut_?igsh=NTRmNWlvbmthenho',
+    address: 'Strada Carpatilor nr 93 500423 Brasov Romania',
+  };
+  const whatsappPhoneNumber = `40${contactDetails.phone.substring(1)}`;
+  const whatsappUrl = `https://wa.me/${whatsappPhoneNumber}`;
+  const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactDetails.address)}`;
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <section id="home" className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center text-center text-white bg-transparent">
+      <section id="home" className="relative w-full h-auto min-h-[600px] flex items-center justify-center text-center text-white bg-transparent py-20">
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto space-y-4">
             <ScrollAnimationWrapper once={false}>
@@ -262,6 +271,34 @@ export default function Home() {
                    <a href="#services">Our Services</a>
                 </Button>
               </div>
+            </ScrollAnimationWrapper>
+            <ScrollAnimationWrapper delay={300} once={false}>
+                <div className="mt-8 flex flex-wrap justify-center gap-4">
+                    <Button asChild size="lg" variant="default" className="!px-6 !py-4 !h-auto">
+                        <a href={`tel:${contactDetails.phone}`} className="flex flex-col items-center gap-2">
+                            <Phone className="h-8 w-8" />
+                            <span>Call Us</span>
+                        </a>
+                    </Button>
+                    <Button asChild size="lg" variant="default" className="!px-6 !py-4 !h-auto">
+                        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
+                            <WhatsAppIcon className="h-8 w-8" />
+                            <span>WhatsApp</span>
+                        </a>
+                    </Button>
+                    <Button asChild size="lg" variant="default" className="!px-6 !py-4 !h-auto">
+                        <a href={contactDetails.instagram} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
+                            <Instagram className="h-8 w-8" />
+                            <span>Instagram</span>
+                        </a>
+                    </Button>
+                    <Button asChild size="lg" variant="default" className="!px-6 !py-4 !h-auto">
+                        <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
+                            <MapPin className="h-8 w-8" />
+                            <span>Find Us</span>
+                        </a>
+                    </Button>
+                </div>
             </ScrollAnimationWrapper>
           </div>
         </div>
