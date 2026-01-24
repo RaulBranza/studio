@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { LogoCircle } from '@/components/logo';
 
 const SHAPES = [
@@ -28,26 +28,8 @@ const SHAPES = [
 ];
 
 export function BackgroundShapes() {
-    const [scrolled, setScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 200);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
   return (
     <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
-        <div className={cn(
-            'fixed right-8 transition-all duration-1000 ease-in-out',
-            scrolled ? 'bottom-8' : '-top-full'
-        )}>
-            <h1 className="text-6xl font-bold text-foreground/5 select-none font-headline tracking-widest">
-                ClipCut
-            </h1>
-        </div>
         <div className="relative w-full h-full">
             {SHAPES.map((shape, i) => (
                 <div
