@@ -30,8 +30,8 @@ const SHAPES = [
 export function BackgroundShapes() {
   return (
     <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-[20vw] font-bold text-foreground/5 select-none font-headline tracking-widest">
+        <div className="absolute inset-0 flex items-end justify-end p-8">
+            <h1 className="text-6xl font-bold text-foreground/5 select-none font-headline tracking-widest">
                 CLIPCUT
             </h1>
         </div>
