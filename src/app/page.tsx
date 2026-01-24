@@ -178,29 +178,29 @@ export default function Home() {
     {
       icon: TrendingUp,
       title: "Crește vizibilitatea clienților potențiali",
-      description: <p>Prin promovarea centralizată, salonul tău apare în fața unei audiențe mai mari decât dacă te promovezi singur. Mai multe vizibilizări = mai multe oportunități de programări.</p>
+      description: <p className="text-chrome">Prin promovarea centralizată, salonul tău apare în fața unei audiențe mai mari decât dacă te promovezi singur. Mai multe vizibilizări = mai multe oportunități de programări.</p>
     },
     {
       icon: BadgePercent,
       title: "Reducerea costurilor de marketing individual",
-      description: <p>În loc să cheltui fiecare leu pe reclame sau promovare dispersată, CLIPCUT consolidează vizibilitatea într-un canal mai puternic, eficientizând investiția.</p>
+      description: <p className="text-chrome">În loc să cheltui fiecare leu pe reclame sau promovare dispersată, CLIPCUT consolidează vizibilitatea într-un canal mai puternic, eficientizând investiția.</p>
     },
     {
       icon: Zap,
       title: "Creșterea ratei de conversie",
-      description: <p>O prezență solidă în CLIPCUT transmite profesionalism și legitimitate. Oamenii rezervă mai ușor la cine pare serios, nu doar ocupat.</p>
+      description: <p className="text-chrome">O prezență solidă în CLIPCUT transmite profesionalism și legitimitate. Oamenii rezervă mai ușor la cine pare serios, nu doar ocupat.</p>
     },
     {
       icon: Clock,
       title: "Economisești timp = maximizare a veniturilor",
       description: (
         <>
-          <p>Promovarea individuală îți consumă timp (postări, strategii, texte, reels). Parteneriatul CLIPCUT preia o parte din expunere, astfel:</p>
-          <ul className="list-disc list-inside text-left mt-2 space-y-1">
+          <p className="text-chrome">Promovarea individuală îți consumă timp (postări, strategii, texte, reels). Parteneriatul CLIPCUT preia o parte din expunere, astfel:</p>
+          <ul className="list-disc list-inside text-left mt-2 space-y-1 text-chrome">
             <li>tu te concentrezi pe clienți</li>
             <li>economisești timp = mai multe programări rentabile</li>
           </ul>
-          <p className="mt-2 font-medium">Timp economisit - bani câștigați.</p>
+          <p className="mt-2 font-medium text-chrome">Timp economisit - bani câștigați.</p>
         </>
       )
     },
@@ -209,13 +209,13 @@ export default function Home() {
       title: "Acces la colaborări și recomandări",
       description: (
          <>
-          <p>Fiind parte dintr-o comunitate selectivă, îți crești șansele:</p>
-          <ul className="list-disc list-inside text-left mt-2 space-y-1">
+          <p className="text-chrome">Fiind parte dintr-o comunitate selectivă, îți crești șansele:</p>
+          <ul className="list-disc list-inside text-left mt-2 space-y-1 text-chrome">
             <li>să fii recomandat de alți membri</li>
             <li>prețuri mai bune de la distribuitori</li>
             <li>să fii invitat la evenimente sau campanii</li>
           </ul>
-          <p className="mt-2">Toate acestea pot aduce client nou fără cost direct.</p>
+          <p className="mt-2 text-chrome">Toate acestea pot aduce client nou fără cost direct.</p>
         </>
       )
     },
@@ -224,15 +224,15 @@ export default function Home() {
       title: "Efect de „proof of quality”",
       description: (
         <>
-          <p>Accesul selectiv CLIPCUT funcționează ca o validare externă, reducând ezitarea clientului și susținând o decizie mai rapidă și mai sigură. Această validare nu promite rezultate, dar reduce fricțiunea deciziei: clientul caută mai puțin, compară mai puțin, se îndoiește mai puțin.</p>
-          <p className="font-semibold mt-4">În practică, asta poate însemna:</p>
-          <ul className="list-disc list-inside text-left mt-2 space-y-1">
+          <p className="text-chrome">Accesul selectiv CLIPCUT funcționează ca o validare externă, reducând ezitarea clientului și susținând o decizie mai rapidă și mai sigură. Această validare nu promite rezultate, dar reduce fricțiunea deciziei: clientul caută mai puțin, compară mai puțin, se îndoiește mai puțin.</p>
+          <p className="font-semibold mt-4 text-chrome">În practică, asta poate însemna:</p>
+          <ul className="list-disc list-inside text-left mt-2 space-y-1 text-chrome">
             <li>decizie mai rapidă de programare,</li>
             <li>mai puține întrebări legate de preț,</li>
             <li>mai multă deschidere către servicii complete,</li>
             <li>o percepție generală de profesionalism ridicat.</li>
           </ul>
-          <p className="mt-4 italic">„Proof of quality” nu este despre a spune că ești cel mai bun, ci despre a nu fi nevoit să demonstrezi constant.</p>
+          <p className="mt-4 italic text-chrome">„Proof of quality” nu este despre a spune că ești cel mai bun, ci despre a nu fi nevoit să demonstrezi constant.</p>
         </>
       )
     }
@@ -248,17 +248,17 @@ export default function Home() {
   const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactDetails.address)}`;
 
   return (
-    <div className="flex flex-col min-h-[100dvh] text-3d">
-      <section id="home" className="relative w-full h-auto min-h-[600px] flex items-center justify-center text-center text-white bg-transparent py-20">
+    <div className="flex flex-col min-h-[100dvh]">
+      <section id="home" className="relative w-full h-auto min-h-[600px] flex items-center justify-center text-center bg-transparent py-20">
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto space-y-4">
             <ScrollAnimationWrapper once={false}>
-              <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+              <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-chrome">
                 ClipCut
               </h1>
             </ScrollAnimationWrapper>
             <ScrollAnimationWrapper delay={100} once={false}>
-              <p className="text-lg md:text-xl text-foreground/90">
+              <p className="text-lg md:text-xl text-chrome">
                 one brand thousands of chairs CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
               </p>
             </ScrollAnimationWrapper>
@@ -274,21 +274,21 @@ export default function Home() {
             </ScrollAnimationWrapper>
             <ScrollAnimationWrapper delay={300} once={false}>
               <div className="mt-8 flex flex-wrap justify-center gap-10 md:gap-16">
-                <a href={`tel:${contactDetails.phone}`} className="group flex flex-col items-center gap-2 text-foreground/80 transition-all duration-300 hover:text-foreground hover:scale-110">
-                    <Phone className="h-10 w-10 text-primary drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0" />
-                    <span className="text-sm font-medium">Call Us</span>
+                <a href={`tel:${contactDetails.phone}`} className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                    <Phone className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-chrome" />
+                    <span className="text-sm font-medium text-chrome">Call Us</span>
                 </a>
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 text-foreground/80 transition-all duration-300 hover:text-foreground hover:scale-110">
-                    <WhatsAppIcon className="h-10 w-10 text-primary drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0" />
-                    <span className="text-sm font-medium">WhatsApp</span>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                    <WhatsAppIcon className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-chrome" />
+                    <span className="text-sm font-medium text-chrome">WhatsApp</span>
                 </a>
-                <a href={contactDetails.instagram} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 text-foreground/80 transition-all duration-300 hover:text-foreground hover:scale-110">
-                    <Instagram className="h-10 w-10 text-primary drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0" />
-                    <span className="text-sm font-medium">Instagram</span>
+                <a href={contactDetails.instagram} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                    <Instagram className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-chrome" />
+                    <span className="text-sm font-medium text-chrome">Instagram</span>
                 </a>
-                <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 text-foreground/80 transition-all duration-300 hover:text-foreground hover:scale-110">
-                    <MapPin className="h-10 w-10 text-primary drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0" />
-                    <span className="text-sm font-medium">Find Us</span>
+                <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                    <MapPin className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-chrome" />
+                    <span className="text-sm font-medium text-chrome">Find Us</span>
                 </a>
               </div>
             </ScrollAnimationWrapper>
@@ -301,8 +301,8 @@ export default function Home() {
           <ScrollAnimationWrapper once={false}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Membership Perks</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Membership Perks</h2>
+                <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
                   Your membership includes a wide range of services at any of our partner locations.
                 </p>
               </div>
@@ -314,13 +314,13 @@ export default function Home() {
                 <Card className="text-center bg-card/80 backdrop-blur-sm">
                   <CardHeader>
                     <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
-                      <service.icon className="w-8 h-8 text-primary" />
+                      <service.icon className="w-8 h-8 text-chrome" />
                     </div>
-                    <CardTitle className="font-headline mt-4">{service.title}</CardTitle>
-                    <CardDescription className="text-muted-foreground pt-2">{service.description}</CardDescription>
+                    <CardTitle className="font-headline mt-4 text-chrome">{service.title}</CardTitle>
+                    <CardDescription className="pt-2 text-chrome">{service.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-2xl font-bold text-primary">{service.price}</p>
+                    <p className="text-2xl font-bold text-chrome">{service.price}</p>
                   </CardContent>
                 </Card>
               </ScrollAnimationWrapper>
@@ -334,11 +334,11 @@ export default function Home() {
           <ScrollAnimationWrapper once={false}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">ONE BRAND. THOUSANDS OF CHAIRS.</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">ONE BRAND. THOUSANDS OF CHAIRS.</h2>
+                <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
                   CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
                 </p>
-                <h3 className="text-xl font-bold font-headline tracking-tighter sm:text-3xl pt-8 !mt-8">
+                <h3 className="text-xl font-bold font-headline tracking-tighter sm:text-3xl pt-8 !mt-8 text-chrome">
                   ACCESUL ESTE SELECTIV
                 </h3>
               </div>
@@ -350,12 +350,12 @@ export default function Home() {
                 <Card className="text-center bg-card/80 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="items-center">
                     <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
-                      <benefit.icon className="w-8 h-8 text-primary" />
+                      <benefit.icon className="w-8 h-8 text-chrome" />
                     </div>
-                    <CardTitle className="font-headline mt-4 text-xl">{benefit.title}</CardTitle>
+                    <CardTitle className="font-headline mt-4 text-xl text-chrome">{benefit.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow text-sm text-left">
-                    <div className="text-muted-foreground">{benefit.description}</div>
+                    <div className="text-chrome">{benefit.description}</div>
                   </CardContent>
                 </Card>
               </ScrollAnimationWrapper>
@@ -369,8 +369,8 @@ export default function Home() {
           <ScrollAnimationWrapper once={false}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Styles from Our Network</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Styles from Our Network</h2>
+                <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
                   See the incredible work from top barbers in the ClipCut network.
                 </p>
               </div>
@@ -412,8 +412,8 @@ export default function Home() {
           <ScrollAnimationWrapper once={false}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl">Find a Partner Barbershop</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Find a Partner Barbershop</h2>
+                <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
                   Ready for a fresh look? Find a convenient partner location and book your next appointment seamlessly through our platform.
                 </p>
               </div>
