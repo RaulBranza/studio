@@ -8,10 +8,10 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 
 const navLinks = [
-  { href: '/#services', label: 'Servicii' },
-  { href: '/#for-partners', label: 'Pentru Parteneri' },
-  { href: '/#gallery', label: 'Galerie' },
-  { href: '/#book', label: 'Alătură-te' },
+  { href: '/services', label: 'Servicii' },
+  { href: '/for-partners', label: 'Pentru Parteneri' },
+  { href: '/gallery', label: 'Galerie' },
+  { href: '/join', label: 'Alătură-te' },
 ];
 
 export function Header() {
@@ -35,7 +35,7 @@ export function Header() {
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
           <Button asChild className="hidden md:flex" variant="accent">
-            <a href="/#book">Devino Partener</a>
+            <a href="/join">Devino Partener</a>
           </Button>
           <Sheet>
             <SheetTrigger asChild>
@@ -64,7 +64,7 @@ export function Header() {
                 </nav>
                 <SheetClose asChild>
                   <Button asChild variant="accent">
-                    <a href="/#book">Devino Partener</a>
+                    <a href="/join">Devino Partener</a>
                   </Button>
                 </SheetClose>
               </div>
