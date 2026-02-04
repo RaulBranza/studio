@@ -9,7 +9,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/s
 
 const navLinks = [
   { href: '/services', label: 'Servicii' },
-  { href: '/for-partners', label: 'Pentru Parteneri' },
+  { href: '/#for-partners', label: 'Pentru Parteneri' },
   { href: '/gallery', label: 'Galerie' },
   { href: '/join', label: 'Alătură-te' },
 ];
