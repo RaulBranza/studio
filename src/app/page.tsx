@@ -3,7 +3,6 @@
 import { Button } from '@/components/ui/button';
 import { Phone, Instagram, MapPin, TrendingUp, BadgePercent, Zap, Clock, Users, ShieldCheck } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/icons';
-import { ScrollAnimationWrapper } from '@/components/scroll-animation-wrapper';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const partnerBenefits = [
@@ -87,84 +86,70 @@ export default function Home() {
       <section id="home" className="relative w-full flex-1 flex items-center justify-center text-center bg-transparent py-20">
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto space-y-4">
-            <ScrollAnimationWrapper once={false}>
-              <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-chrome">
-                ClipCut
-              </h1>
-            </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper delay={100} once={false}>
-              <h2 className="text-xl md:text-2xl font-medium tracking-wider uppercase text-chrome">
-                one brand thousands of chairs
-              </h2>
-            </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper delay={200} once={false}>
-              <p className="text-lg md:text-xl text-chrome max-w-2xl mx-auto">
-                conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
-              </p>
-            </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper delay={300} once={false}>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" variant="accent">
-                  <a href="/join">Devino Partener</a>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <a href="/services">Serviciile Noastre</a>
-                </Button>
-              </div>
-            </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper delay={400} once={false}>
-              <div className="mt-8 flex flex-wrap justify-center gap-10 md:gap-16">
-                <a href={`tel:${contactDetails.phone}`} className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
-                    <Phone className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
-                    <span className="text-sm font-medium text-chrome">Sună-ne</span>
-                </a>
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
-                    <WhatsAppIcon className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
-                    <span className="text-sm font-medium text-chrome">WhatsApp</span>
-                </a>
-                <a href={contactDetails.instagram} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
-                    <Instagram className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
-                    <span className="text-sm font-medium text-chrome">Instagram</span>
-                </a>
-                <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
-                    <MapPin className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
-                    <span className="text-sm font-medium text-chrome">Găsește-ne</span>
-                </a>
-              </div>
-            </ScrollAnimationWrapper>
+            <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-chrome">
+              ClipCut
+            </h1>
+            <h2 className="text-xl md:text-2xl font-medium tracking-wider uppercase text-chrome">
+              one brand thousands of chairs
+            </h2>
+            <p className="text-lg md:text-xl text-chrome max-w-2xl mx-auto">
+              conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" variant="accent">
+                <a href="/join">Devino Partener</a>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <a href="/services">Serviciile Noastre</a>
+              </Button>
+            </div>
+            <div className="mt-8 flex flex-wrap justify-center gap-10 md:gap-16">
+              <a href={`tel:${contactDetails.phone}`} className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                  <Phone className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
+                  <span className="text-sm font-medium text-chrome">Sună-ne</span>
+              </a>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                  <WhatsAppIcon className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
+                  <span className="text-sm font-medium text-chrome">WhatsApp</span>
+              </a>
+              <a href={contactDetails.instagram} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                  <Instagram className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
+                  <span className="text-sm font-medium text-chrome">Instagram</span>
+              </a>
+              <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                  <MapPin className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
+                  <span className="text-sm font-medium text-chrome">Găsește-ne</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
       <section id="for-partners" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
-          <ScrollAnimationWrapper once={false}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">ONE BRAND. THOUSANDS OF CHAIRS.</h2>
-                <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
-                  CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
-                </p>
-                <h3 className="text-xl font-bold font-headline tracking-tighter sm:text-3xl pt-8 !mt-8 text-chrome">
-                  ACCESUL ESTE SELECTIV
-                </h3>
-              </div>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">ONE BRAND. THOUSANDS OF CHAIRS.</h2>
+              <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
+                CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
+              </p>
+              <h3 className="text-xl font-bold font-headline tracking-tighter sm:text-3xl pt-8 !mt-8 text-chrome">
+                ACCESUL ESTE SELECTIV
+              </h3>
             </div>
-          </ScrollAnimationWrapper>
+          </div>
           <div className="mx-auto grid max-w-sm items-stretch gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
             {partnerBenefits.map((benefit, index) => (
-              <ScrollAnimationWrapper key={benefit.title} delay={index * 100} once={false}>
-                <Card className="text-center bg-card/80 backdrop-blur-sm h-full flex flex-col">
-                  <CardHeader className="items-center">
-                    <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
-                      <benefit.icon className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle className="font-headline mt-4 text-xl text-chrome">{benefit.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow text-sm text-left">
-                    <div>{benefit.description}</div>
-                  </CardContent>
-                </Card>
-              </ScrollAnimationWrapper>
+              <Card key={benefit.title} className="text-center bg-card/80 backdrop-blur-sm h-full flex flex-col">
+                <CardHeader className="items-center">
+                  <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
+                    <benefit.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <CardTitle className="font-headline mt-4 text-xl text-chrome">{benefit.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow text-sm text-left">
+                  <div>{benefit.description}</div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

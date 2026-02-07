@@ -10,7 +10,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from '@/hooks/use-toast';
-import { ScrollAnimationWrapper } from '@/components/scroll-animation-wrapper';
 import { judete, localitati } from '@/lib/romanian-data';
 
 const joinFormSchema = z.object({
@@ -155,7 +154,6 @@ export default function JoinPage() {
     return (
         <section id="book" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
             <div className="container px-4 md:px-6">
-            <ScrollAnimationWrapper once={false}>
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
                     <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Alătură-te ClipCut</h2>
@@ -164,8 +162,6 @@ export default function JoinPage() {
                     </p>
                 </div>
                 </div>
-            </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper delay={200} once={false}>
                 <div className="mx-auto w-full max-w-3xl mt-12">
                 <Card className="bg-card/80 backdrop-blur-sm">
                     <CardContent className="p-6 md:p-8">
@@ -173,7 +169,6 @@ export default function JoinPage() {
                     </CardContent>
                 </Card>
                 </div>
-            </ScrollAnimationWrapper>
             </div>
         </section>
     );
