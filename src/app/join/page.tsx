@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { useState } from "react";
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -26,6 +27,8 @@ type JoinFormValues = z.infer<typeof joinFormSchema>;
 
 function JoinForm() {
   const { toast } = useToast();
+  const [lastSubmission, setLastSubmission] = useState<JoinFormValues | null>(null);
+
   const form = useForm<JoinFormValues>({
     resolver: zodResolver(joinFormSchema),
     defaultValues: {
@@ -37,6 +40,16 @@ function JoinForm() {
   });
 
   function onSubmit(data: JoinFormValues) {
+    if (lastSubmission && JSON.stringify(lastSubmission) === JSON.stringify(data)) {
+      toast({
+        variant: "destructive",
+        title: "Aplicație duplicat",
+        description: "Ați trimis deja o aplicație cu aceste date.",
+      });
+      return;
+    }
+
+    setLastSubmission(data);
     toast({
       title: "Aplicație Trimisă!",
       description: `Mulțumim, ${data.name}! Am primit aplicația ta pentru a te alătura ClipCut. Te vom contacta în curând.`,
