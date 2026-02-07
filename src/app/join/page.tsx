@@ -156,7 +156,7 @@ export default function JoinPage() {
             <div className="container px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                    <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Alătură-te ClipCut</h2>
+                    <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Devino Partener ClipCut</h2>
                     <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
                     Devino partenerul nostru.
                     </p>

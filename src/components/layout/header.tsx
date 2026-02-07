@@ -11,7 +11,6 @@ const navLinks = [
   { href: '/services', label: 'Servicii' },
   { href: '/#for-partners', label: 'Pentru Parteneri' },
   { href: '/gallery', label: 'Galerie' },
-  { href: '/join', label: 'Alătură-te' },
 ];
 
 export function Header() {
