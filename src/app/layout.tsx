@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { BackgroundShapes } from '@/components/layout/background-shapes';
 
 export const metadata: Metadata = {
-  title: 'ClipCut Membership',
+  title: 'ClipCut',
   description: 'Pașaportul tău pentru îngrijire premium. Accesează o rețea de frizerii de top cu un singur abonament.',
   icons: {
     icon: '/favicon.ico',

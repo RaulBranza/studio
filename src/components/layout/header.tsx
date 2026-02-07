@@ -20,7 +20,7 @@ export function Header() {
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Scissors className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline text-lg">ClipCut Membership</span>
+          <span className="font-bold font-headline text-lg">ClipCut</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks.map((link) => (
@@ -48,7 +48,7 @@ export function Header() {
               <div className="flex flex-col gap-6 pt-6">
                 <Link href="/" className="flex items-center space-x-2">
                   <Scissors className="h-6 w-6 text-primary" />
-                  <span className="font-bold font-headline text-lg">ClipCut Membership</span>
+                  <span className="font-bold font-headline text-lg">ClipCut</span>
                 </Link>
                 <nav className="grid gap-4">
                    {navLinks.map((link) => (

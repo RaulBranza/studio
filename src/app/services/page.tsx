@@ -1,27 +1,32 @@
 "use client";
 
-import { Scissors } from 'lucide-react';
+import { BadgePercent, Megaphone, Ticket, Users } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { ScrollAnimationWrapper } from '@/components/scroll-animation-wrapper';
-import { CombIcon, StraightRazorIcon } from '@/components/icons';
 
 const services = [
   {
-    icon: Scissors,
-    title: 'Tuns Clasic',
-    description: 'O tunsoare clasică, adaptată stilului tău. Include spălat și aranjat.',
+    icon: Megaphone,
+    title: 'Promovare Centralizată',
+    description: 'Vizibilitate crescută prin campaniile noastre de marketing, ajungând la mii de clienți potențiali.',
     price: 'Inclus',
   },
   {
-    icon: StraightRazorIcon,
-    title: 'Tuns și Aranjat Barbă',
-    description: 'Conturare și aranjare profesională pentru a-ți menține barba impecabilă.',
+    icon: Users,
+    title: 'Acces la Comunitate',
+    description: 'Conectează-te cu alți profesioniști de top, împărtășește idei și colaborează în cadrul rețelei noastre.',
     price: 'Inclus',
   },
   {
-    icon: CombIcon,
-    title: 'Styling Păr',
-    description: 'Obține look-ul perfect pentru orice ocazie, de la casual la formal.',
+    icon: BadgePercent,
+    title: 'Discount de la Distribuitori',
+    description: 'Beneficiază de prețuri preferențiale la produse și echipamente de la partenerii noștri distribuitori.',
+    price: 'Inclus',
+  },
+  {
+    icon: Ticket,
+    title: 'Acces la Evenimente ClipCut',
+    description: 'Participă gratuit sau cu discount la workshop-uri, training-uri și evenimente exclusive de networking.',
     price: 'Inclus',
   },
 ];
@@ -33,16 +38,17 @@ export default function ServicesPage() {
         <ScrollAnimationWrapper once={false}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Avantajele Membrilor</h2>
+              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Avantajele Partenerilor</h2>
               <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
+                Descoperă beneficiile exclusive ale parteneriatului cu ClipCut.
               </p>
             </div>
           </div>
         </ScrollAnimationWrapper>
-        <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
+        <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-2 mt-12">
           {services.map((service, index) => (
             <ScrollAnimationWrapper key={service.title} delay={index * 100} once={false}>
-              <Card className="text-center bg-card/80 backdrop-blur-sm">
+              <Card className="text-center bg-card/80 backdrop-blur-sm h-full">
                 <CardHeader>
                   <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
                     <service.icon className="w-8 h-8 text-primary" />

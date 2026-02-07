@@ -9,7 +9,7 @@ export function Footer() {
           <div className="space-y-2">
             <Link href="/" className="flex items-center justify-center space-x-2 mb-4">
               <Scissors className="h-6 w-6 text-primary" />
-              <span className="font-bold font-headline text-lg">ClipCut Membership</span>
+              <span className="font-bold font-headline text-lg">ClipCut</span>
             </Link>
             <p className="text-sm">Pașaportul tău pentru îngrijire premium.</p>
             <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} ClipCut. Toate drepturile rezervate.</p>
