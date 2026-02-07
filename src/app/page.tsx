@@ -93,7 +93,7 @@ export default function Home() {
               one brand thousands of chairs
             </h2>
             <p className="text-lg md:text-xl text-chrome max-w-2xl mx-auto">
-              conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
+              conectează frizeri profesioniști sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="accent">
@@ -130,7 +130,7 @@ export default function Home() {
             <div className="space-y-2">
               <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">ONE BRAND. THOUSANDS OF CHAIRS.</h2>
               <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
-                CLIPCUT conectează profesioniști independenți sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
+                conectează frizeri profesioniști sub o promovare comună, fără a le schimba stilul, regulile sau prețurile. Independența rămâne. Percepția se amplifică.
               </p>
               <h3 className="text-xl font-bold font-headline tracking-tighter sm:text-3xl pt-8 !mt-8 text-chrome">
                 ACCESUL ESTE SELECTIV
