@@ -82,7 +82,7 @@ export default function Home() {
   const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactDetails.address)}`;
 
   return (
-    <>
+    <div className="animate-page-transition">
       <section id="home" className="relative w-full flex-1 flex items-center justify-center text-center bg-transparent py-20">
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto space-y-4">
@@ -154,6 +154,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
