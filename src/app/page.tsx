@@ -112,26 +112,32 @@ export default function Home() {
                 </Button>
               </div>
             </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper animation="fade-in" delay={500}>
-              <div className="mt-8 flex flex-wrap justify-center gap-10 md:gap-16">
-                <a href={`tel:${contactDetails.phone}`} className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
-                    <Phone className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
-                    <span className="text-sm font-medium text-chrome">Sună-ne</span>
-                </a>
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
-                    <WhatsAppIcon className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
-                    <span className="text-sm font-medium text-chrome">WhatsApp</span>
-                </a>
-                <a href={contactDetails.instagram} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
-                    <Instagram className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
-                    <span className="text-sm font-medium text-chrome">Instagram</span>
-                </a>
-                <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
-                    <MapPin className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
-                    <span className="text-sm font-medium text-chrome">Găsește-ne</span>
-                </a>
-              </div>
-            </ScrollAnimationWrapper>
+            <div className="mt-8 flex flex-wrap justify-center gap-10 md:gap-16">
+              <ScrollAnimationWrapper animation="slide-in-left" delay={500}>
+                  <a href={`tel:${contactDetails.phone}`} className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                      <Phone className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
+                      <span className="text-sm font-medium text-chrome">Sună-ne</span>
+                  </a>
+              </ScrollAnimationWrapper>
+              <ScrollAnimationWrapper animation="slide-in-left" delay={600}>
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                      <WhatsAppIcon className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
+                      <span className="text-sm font-medium text-chrome">WhatsApp</span>
+                  </a>
+              </ScrollAnimationWrapper>
+              <ScrollAnimationWrapper animation="slide-in-right" delay={600}>
+                  <a href={contactDetails.instagram} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                      <Instagram className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
+                      <span className="text-sm font-medium text-chrome">Instagram</span>
+                  </a>
+              </ScrollAnimationWrapper>
+              <ScrollAnimationWrapper animation="slide-in-right" delay={500}>
+                  <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
+                      <MapPin className="h-10 w-10 drop-shadow-md transition-all duration-300 group-hover:drop-shadow-xl group-hover:-translate-y-1 group-active:translate-y-0 text-primary" />
+                      <span className="text-sm font-medium text-chrome">Găsește-ne</span>
+                  </a>
+              </ScrollAnimationWrapper>
+            </div>
           </div>
         </div>
       </section>

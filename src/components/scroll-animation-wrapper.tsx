@@ -3,7 +3,7 @@
 import { useRef, useEffect, useState, ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
-type AnimationType = 'slide-in-left' | 'slide-in-up' | 'fade-in';
+type AnimationType = 'slide-in-left' | 'slide-in-right' | 'slide-in-up' | 'fade-in';
 
 type ScrollAnimationWrapperProps = {
   children: ReactNode;
@@ -51,6 +51,10 @@ export function ScrollAnimationWrapper({ children, className, delay = 0, once = 
   const animationClasses = {
     'slide-in-left': {
       hidden: 'opacity-0 -translate-x-10',
+      visible: 'opacity-100 translate-x-0',
+    },
+    'slide-in-right': {
+      hidden: 'opacity-0 translate-x-10',
       visible: 'opacity-100 translate-x-0',
     },
     'slide-in-up': {
