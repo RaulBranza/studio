@@ -45,8 +45,8 @@ export default function GalleryPage() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="ml-12 sm:ml-0" />
-              <CarouselNext className="mr-12 sm:mr-0"/>
+              <CarouselPrevious className="left-4 sm:-left-12" />
+              <CarouselNext className="right-4 sm:-right-12" />
             </Carousel>
           </div>
         </ScrollAnimationWrapper>
