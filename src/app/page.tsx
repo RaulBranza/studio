@@ -87,7 +87,7 @@ export default function Home() {
       <section id="home" className="relative w-full flex-1 flex items-center justify-center text-center bg-transparent py-20">
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto space-y-4">
-            <ScrollAnimationWrapper animation="slide-in-up" delay={100}>
+            <ScrollAnimationWrapper animation="slide-in-left" delay={100}>
               <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-chrome">
                 ClipCut
               </h1>
