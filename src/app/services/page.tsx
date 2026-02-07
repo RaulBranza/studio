@@ -2,6 +2,7 @@
 
 import { BadgePercent, Megaphone, Ticket, Users } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { ScrollAnimationWrapper } from '@/components/scroll-animation-wrapper';
 
 const services = [
   {
@@ -32,30 +33,34 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-transparent animate-page-transition">
+    <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Avantajele Partenerilor</h2>
-            <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
-              Descoperă beneficiile exclusive ale parteneriatului cu ClipCut.
-            </p>
+        <ScrollAnimationWrapper animation="slide-in-up">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Avantajele Partenerilor</h2>
+              <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
+                Descoperă beneficiile exclusive ale parteneriatului cu ClipCut.
+              </p>
+            </div>
           </div>
-        </div>
+        </ScrollAnimationWrapper>
         <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-2 mt-12">
           {services.map((service, index) => (
-            <Card key={service.title} className="text-center bg-card/80 backdrop-blur-sm h-full">
-              <CardHeader>
-                <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
-                  <service.icon className="w-8 h-8 text-primary" />
-                </div>
-                <CardTitle className="font-headline mt-4 text-chrome">{service.title}</CardTitle>
-                <CardDescription className="pt-2 text-chrome">{service.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-2xl font-bold text-chrome">{service.price}</p>
-              </CardContent>
-            </Card>
+            <ScrollAnimationWrapper key={service.title} animation="fade-in" delay={100 * (index + 1)}>
+              <Card key={service.title} className="text-center bg-card/80 backdrop-blur-sm h-full">
+                <CardHeader>
+                  <div className="mx-auto bg-primary/10 rounded-full p-4 w-fit">
+                    <service.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <CardTitle className="font-headline mt-4 text-chrome">{service.title}</CardTitle>
+                  <CardDescription className="pt-2 text-chrome">{service.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-2xl font-bold text-chrome">{service.price}</p>
+                </CardContent>
+              </Card>
+            </ScrollAnimationWrapper>
           ))}
         </div>
       </div>

@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from '@/hooks/use-toast';
 import { judete, localitati } from '@/lib/romanian-data';
+import { ScrollAnimationWrapper } from '@/components/scroll-animation-wrapper';
 
 const joinFormSchema = z.object({
   name: z.string().min(2, { message: "Numele trebuie să aibă cel puțin 2 caractere." }),
@@ -152,23 +153,27 @@ function JoinForm() {
 
 export default function JoinPage() {
     return (
-        <section id="book" className="w-full py-12 md:py-24 lg:py-32 bg-transparent animate-page-transition">
+        <section id="book" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
             <div className="container px-4 md:px-6">
-                <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <div className="space-y-2">
-                    <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Devino Partener ClipCut</h2>
-                    <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
-                    Devino partenerul nostru.
-                    </p>
-                </div>
-                </div>
-                <div className="mx-auto w-full max-w-3xl mt-12">
-                <Card className="bg-card/80 backdrop-blur-sm">
-                    <CardContent className="p-6 md:p-8">
-                    <JoinForm />
-                    </CardContent>
-                </Card>
-                </div>
+                <ScrollAnimationWrapper animation="slide-in-up">
+                  <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                  <div className="space-y-2">
+                      <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-chrome">Devino Partener ClipCut</h2>
+                      <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-chrome">
+                      Devino partenerul nostru.
+                      </p>
+                  </div>
+                  </div>
+                </ScrollAnimationWrapper>
+                <ScrollAnimationWrapper animation="fade-in" delay={200}>
+                  <div className="mx-auto w-full max-w-3xl mt-12">
+                  <Card className="bg-card/80 backdrop-blur-sm">
+                      <CardContent className="p-6 md:p-8">
+                      <JoinForm />
+                      </CardContent>
+                  </Card>
+                  </div>
+                </ScrollAnimationWrapper>
             </div>
         </section>
     );
